@@ -1,3 +1,10 @@
+/* ActiveMQ JMS Tester
+ * 
+ * Borrowed heavily from http://activemq.apache.org/hello-world.html
+ * 
+ * Compiled to a JAR and run with java -jar jarname "connection string"
+ * 
+ */
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.apache.log4j.varia.NullAppender;
 
@@ -68,7 +75,7 @@ public class JMS_test {
                 producer.setDeliveryMode(DeliveryMode.NON_PERSISTENT);
  
                 // Create a messages
-                String text = "Nagios test message";
+                String text = "Nagios test message at URI: '" + jms_url + "'";
                 //String text = "Hello world! From: " + Thread.currentThread().getName() + " : " + this.hashCode();
                 TextMessage message = session.createTextMessage(text);
  
