@@ -129,7 +129,7 @@ public class JMS_test {
                 if (message instanceof TextMessage) {
                     TextMessage textMessage = (TextMessage) message;
                     String text = textMessage.getText();
-                    System.out.println("Received: " + text);
+                    System.out.println("SUCCESS: Received " + text);
                     System.exit(0);
                 } else {
                     System.out.println("ERROR: Did not receive message");
